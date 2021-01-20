@@ -8,32 +8,27 @@ export function getRoutes() {
   const routes = [
   {
     "path": "/",
-    "component": require('@/layouts/index.js').default,
+    "component": require('D:/Program Files/workspace/reactdemo/src/layouts').default,
     "routes": [
       {
-        "path": "/HelloWorld",
-        "exact": true,
-        "component": require('@/pages/HelloWorld.js').default
+        "path": "/myTabs",
+        "component": require('D:/Program Files/workspace/reactdemo/src/pages/myTabs').default,
+        "exact": true
       },
       {
-        "path": "/LifeCycle",
-        "exact": true,
-        "component": require('@/pages/LifeCycle.js').default
-      },
-      {
-        "path": "/List",
-        "exact": true,
-        "component": require('@/pages/List.js').default
-      },
-      {
-        "path": "/MyTabs",
-        "exact": true,
-        "component": require('@/pages/MyTabs.js').default
-      },
-      {
-        "path": "/Show",
-        "exact": true,
-        "component": require('@/pages/Show.js').default
+        "path": "/user",
+        "routes": [
+          {
+            "path": "/user/list",
+            "component": require('D:/Program Files/workspace/reactdemo/src/pages/user/UserList').default,
+            "exact": true
+          },
+          {
+            "path": "/user/add",
+            "component": require('D:/Program Files/workspace/reactdemo/src/pages/user/UserAdd').default,
+            "exact": true
+          }
+        ]
       }
     ]
   }

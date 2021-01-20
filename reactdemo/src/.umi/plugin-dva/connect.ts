@@ -7,6 +7,7 @@ import { match } from 'react-router-dom';
 import { Location, LocationState, History } from 'history';
 
 export * from 'D:/Program Files/workspace/reactdemo/src/models/ListData';
+export * from 'D:/Program Files/workspace/reactdemo/src/models/UserListData';
 
 export interface Action<T = any> {
   type: T
